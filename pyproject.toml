@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fliq"
+version = "0.1.0"
+description = "Fast lightweight plug-and-play face recognition optimization engine"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+api = ["fastapi>=0.110", "uvicorn>=0.27"]
+video = ["opencv-python>=4.8"]
+dev = ["pytest>=8.0"]
+full = ["fastapi>=0.110", "uvicorn>=0.27", "opencv-python>=4.8", "pytest>=8.0"]
+onnx = ["onnxruntime>=1.15"]
+faiss = ["faiss-cpu>=1.7"]
+
+[project.scripts]
+fliq = "fliq.cli:main"
+
+[tool.setuptools]
+packages = { find = { where = ["."], include = ["fliq*"], exclude = ["fliq.tests*"] } }
+
+[tool.setuptools.package-data]
+fliq = ["py.typed"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+addopts = "-q"

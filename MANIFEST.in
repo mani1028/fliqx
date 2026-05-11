@@ -1,0 +1,42 @@
+# Exclude test files from PyPI distribution
+recursive-exclude fliq/tests *
+exclude fliq/tests
+exclude fliq/tests/__pycache__
+
+# Exclude benchmarks (these are for development/testing)
+recursive-exclude fliq/benchmarks/reports *
+exclude fliq/benchmarks/reports
+
+# Exclude development files
+exclude setup.py
+exclude setup.cfg
+exclude tox.ini
+exclude .flake8
+exclude pytest.ini
+
+# Exclude documentation and guides (keep them in GitHub)
+exclude *.md
+exclude PRODUCTION.md
+exclude UPGRADE_SUMMARY.md
+exclude CLI_REFERENCE.md
+exclude IMPLEMENTATION_COMPLETE.md
+exclude README_PRODUCTION.md
+exclude ARCHITECTURE.md
+exclude CONTRIBUTING.md
+
+# Exclude configuration files (keep them in GitHub)
+exclude .gitignore
+exclude .github
+exclude .github/*
+
+# Exclude scripts
+recursive-exclude scripts *
+exclude scripts
+
+# Include only source code and necessary files
+recursive-include fliq *.py
+recursive-include fliq py.typed
+
+# Include basic documentation in package
+include README.md
+include LICENSE
