@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fliqx"
-version = "0.1.1"
+version = "0.1.2"
 description = "Fast lightweight plug-and-play face recognition optimization engine"
 readme = "README.md"
 requires-python = ">=3.10"
