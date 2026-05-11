@@ -4,7 +4,7 @@ import numpy as np
 
 from fliqx.detection.detector import BoundingBox, DetectedFace
 from fliqx.engine import RecognitionResult
-from fliq import Fliq
+from fliqx import Fliq
 
 
 def _sample_image(seed: int = 1) -> np.ndarray:

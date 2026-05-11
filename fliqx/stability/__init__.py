@@ -28,10 +28,10 @@ class ResourceSample:
     """Single resource usage sample."""
     timestamp: float
     cpu_percent: float
-    gpu_percent: float | None = None
     rss_mb: float
     vms_mb: float
     thread_count: int
+    gpu_percent: float | None = None
     queue_depth: int = 0
 
 

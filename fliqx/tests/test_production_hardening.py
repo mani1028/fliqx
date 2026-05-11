@@ -7,7 +7,7 @@ import pytest
 from threading import Thread, Event
 from time import sleep
 
-from fliq import Fliq
+from fliqx import Fliq
 from fliqx.stability import MemoryLeakDetector, RuntimeMonitor, ProductionWatchdog, MemorySample, ResourceSample
 from fliqx.protection import (
     QueueOverflowProtector,
