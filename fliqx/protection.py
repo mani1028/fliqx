@@ -227,7 +227,7 @@ class StreamRecoveryManager:
         """
         with self._lock:
             attempts = self.recovery_attempts.get(stream_id, 0)
-            if attempts >= self.max_retries:
+            if attempts > self.max_retries:
                 return False
             return True
     

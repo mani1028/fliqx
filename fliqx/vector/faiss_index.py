@@ -193,3 +193,7 @@ class FaissVectorIndex(VectorIndex):
     @property
     def size(self) -> int:
         return int(self._external_ids.shape[0])
+    
+    def __len__(self) -> int:
+        """Return number of embeddings in index."""
+        return self.size

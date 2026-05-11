@@ -107,7 +107,10 @@ class MemoryLeakDetector:
             if mid > 0:
                 first_half_avg = sum(s.rss_mb for s in list(self.samples)[:mid]) / mid
                 second_half_avg = sum(s.rss_mb for s in list(self.samples)[mid:]) / (len(self.samples) - mid)
-                growth_pct = ((second_half_avg - first_half_avg) / first_half_avg) * 100.0
+                if first_half_avg > 0:
+                    growth_pct = ((second_half_avg - first_half_avg) / first_half_avg) * 100.0
+                else:
+                    growth_pct = 0.0
                 
                 if growth_pct > 5:
                     trend = "increasing"
