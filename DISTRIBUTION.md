@@ -4,7 +4,7 @@ This document explains what's included in the PyPI package vs what remains in th
 
 ## PyPI Package (Published)
 
-The `fliq` package published on PyPI contains **only the production code**:
+The `fliqx` package published on PyPI contains **only the production code**:
 
 ### Included in PyPI
 ```
@@ -90,7 +90,7 @@ The GitHub repository contains **everything**: production code, tests, documenta
 pip install fliq
 
 # Use in your code
-from fliq import Fliq
+from fliqx import Fliq
 engine = Fliq()
 results = engine.recognize(image)
 ```
@@ -172,7 +172,7 @@ recursive-include fliq *.py
 Specifies:
 ```toml
 [project.scripts]
-fliq = "fliq.cli:main"  # CLI entry point
+fliqx = "fliqx.cli:main"  # CLI entry point
 
 [tool.setuptools]
 packages = { find = { exclude = ["fliq.tests*"] } }
@@ -209,7 +209,7 @@ pytest
 
 ## CLI Tool Availability
 
-The `fliq` CLI is available in **both** PyPI and GitHub:
+The `fliqx` CLI is available in **both** PyPI and GitHub:
 
 ```bash
 # From PyPI

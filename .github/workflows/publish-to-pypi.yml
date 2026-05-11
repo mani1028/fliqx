@@ -28,10 +28,10 @@ jobs:
     - name: Verify distribution contents
       run: |
         echo "=== Source distribution contents ==="
-        tar -tzf dist/fliq-*.tar.gz | grep -E '\.py$|py.typed' | head -20
+        tar -tzf dist/fliqx-*.tar.gz | grep -E '\.py$|py.typed' | head -20
         echo ""
         echo "=== Checking for test files (should be empty) ==="
-        if tar -tzf dist/fliq-*.tar.gz | grep -q 'tests/'; then
+        if tar -tzf dist/fliqx-*.tar.gz | grep -q 'tests/'; then
           echo "ERROR: Test files found in distribution!"
           exit 1
         fi

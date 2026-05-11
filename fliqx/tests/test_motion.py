@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import numpy as np
 
-from fliq.video.motion import MotionDetector
+from fliqx.video.motion import MotionDetector
 
 
 def test_motion_detector_flags_changes() -> None:

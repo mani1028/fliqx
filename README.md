@@ -14,7 +14,7 @@ FLIQ provides a practical face recognition engine for image, video, and streamin
 - optional FastAPI routes for service integration
 - benchmark helpers for measuring throughput, latency, memory, and stream behavior
 
-The package exports `Fliq`, `FliqConfig`, and `RecognitionMatch` from the top-level `fliq` module.
+The package exports `Fliq`, `FliqConfig`, and `RecognitionMatch` from the top-level `fliqx` module.
 
 ## Installation
 
@@ -51,7 +51,7 @@ pip install -e .[dev]
 
 ```python
 import numpy as np
-from fliq import Fliq
+from fliqx import Fliq
 
 engine = Fliq()
 image = np.zeros((256, 256, 3), dtype=np.uint8)
@@ -110,7 +110,7 @@ When optional acceleration packages are unavailable, the engine falls back to pu
 ## Configuration Examples
 
 ```python
-from fliq import Fliq
+from fliqx import Fliq
 
 engine = Fliq(
 	mode="balanced",
@@ -133,7 +133,7 @@ Common runtime modes:
 If you install the `api` extra, you can create a FastAPI app around the engine:
 
 ```python
-from fliq.api.fastapi_app import create_app
+from fliqx.api.fastapi_app import create_app
 
 app = create_app()
 ```
@@ -174,7 +174,7 @@ Run the test suite with:
 pytest
 ```
 
-The repository is configured for editable installs and includes package markers so the full `fliq` tree is discoverable during development and wheel builds.
+The repository is configured for editable installs and includes package markers so the full `fliqx` tree is discoverable during development and wheel builds.
 
 ## PyPI Distribution
 

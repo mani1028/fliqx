@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import numpy as np
 
-from fliq.vector.faiss_index import FaissVectorIndex
+from fliqx.vector.faiss_index import FaissVectorIndex
 
 
 def test_vector_index_roundtrip() -> None:

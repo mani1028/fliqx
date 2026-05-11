@@ -1,11 +1,11 @@
 # Exclude test files from PyPI distribution
-recursive-exclude fliq/tests *
-exclude fliq/tests
-exclude fliq/tests/__pycache__
+recursive-exclude fliqx/tests *
+exclude fliqx/tests
+exclude fliqx/tests/__pycache__
 
 # Exclude benchmarks (these are for development/testing)
-recursive-exclude fliq/benchmarks/reports *
-exclude fliq/benchmarks/reports
+recursive-exclude fliqx/benchmarks/reports *
+exclude fliqx/benchmarks/reports
 
 # Exclude development files
 exclude setup.py

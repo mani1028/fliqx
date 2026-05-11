@@ -21,7 +21,7 @@ def build_parser() -> argparse.ArgumentParser:
         ArgumentParser instance
     """
     parser = argparse.ArgumentParser(
-        prog="fliq",
+        prog="fliqx",
         description="FLIQ: Production-grade classroom attendance infrastructure",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""

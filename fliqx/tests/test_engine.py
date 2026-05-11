@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import numpy as np
 
-from fliq.detection.detector import BoundingBox, DetectedFace
-from fliq.engine import RecognitionResult
+from fliqx.detection.detector import BoundingBox, DetectedFace
+from fliqx.engine import RecognitionResult
 from fliq import Fliq
 
 

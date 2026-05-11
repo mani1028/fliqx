@@ -8,15 +8,15 @@ from threading import Thread, Event
 from time import sleep
 
 from fliq import Fliq
-from fliq.stability import MemoryLeakDetector, RuntimeMonitor, ProductionWatchdog, MemorySample, ResourceSample
-from fliq.protection import (
+from fliqx.stability import MemoryLeakDetector, RuntimeMonitor, ProductionWatchdog, MemorySample, ResourceSample
+from fliqx.protection import (
     QueueOverflowProtector,
     AdaptiveLoadProtector,
     StreamRecoveryManager,
     SceneStabilityOptimizer,
     LoadProtectionConfig,
 )
-from fliq.stress import StressTestRunner, StressTestConfig, ClassroomLoad
+from fliqx.stress import StressTestRunner, StressTestConfig, ClassroomLoad
 
 
 def _sample_image(seed: int = 1) -> np.ndarray:

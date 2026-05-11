@@ -24,7 +24,7 @@ FLIQ has been upgraded from an optimization prototype to a **production-ready sy
 Simulate multiple concurrent classroom streams to validate system capacity.
 
 ```python
-from fliq.stress import StressTestRunner, StressTestConfig
+from fliqx.stress import StressTestRunner, StressTestConfig
 
 # Run stress test
 config = StressTestConfig(
@@ -58,7 +58,7 @@ print(f"Recognition reduction: {metrics.recognition_reduction_pct:.2f}%")
 Monitor system health over long-running sessions.
 
 ```python
-from fliq.stability import RuntimeMonitor, MemoryLeakDetector, ProductionWatchdog
+from fliqx.stability import RuntimeMonitor, MemoryLeakDetector, ProductionWatchdog
 
 # Create monitor
 monitor = RuntimeMonitor(sampling_interval=30.0)  # Sample every 30 seconds
@@ -92,7 +92,7 @@ monitor.stop()
 Catch gradual memory growth before it becomes critical.
 
 ```python
-from fliq.stability import MemoryLeakDetector, MemorySample
+from fliqx.stability import MemoryLeakDetector, MemorySample
 
 detector = MemoryLeakDetector(
     window_size=100,      # Use last 100 samples
@@ -117,7 +117,7 @@ Automatically adapt system to load and prevent overload.
 #### Queue Overflow Protection
 
 ```python
-from fliq.protection import QueueOverflowProtector
+from fliqx.protection import QueueOverflowProtector
 
 protector = QueueOverflowProtector()
 
@@ -135,7 +135,7 @@ while processing:
 #### Adaptive Load Protection
 
 ```python
-from fliq.protection import AdaptiveLoadProtector
+from fliqx.protection import AdaptiveLoadProtector
 
 protector = AdaptiveLoadProtector()
 
@@ -156,7 +156,7 @@ while monitoring:
 #### Stream Recovery
 
 ```python
-from fliq.protection import StreamRecoveryManager
+from fliqx.protection import StreamRecoveryManager
 
 recovery = StreamRecoveryManager()
 recovery.max_retries = 3
@@ -178,7 +178,7 @@ while streaming:
 Extended cooldowns for stable classroom scenes.
 
 ```python
-from fliq.protection import SceneStabilityOptimizer
+from fliqx.protection import SceneStabilityOptimizer
 
 optimizer = SceneStabilityOptimizer()
 
@@ -200,7 +200,7 @@ while tracking:
 Comprehensive metrics snapshot for monitoring.
 
 ```python
-from fliq import Fliq
+from fliqx import Fliq
 
 engine = Fliq()
 
@@ -233,8 +233,8 @@ This shows how well tracking + cooldown system is reducing actual recognition op
 Run benchmarks and track regressions.
 
 ```python
-from fliq.benchmarks import benchmark_video, benchmark_classroom_video, BenchmarkReporter
-from fliq import Fliq
+from fliqx.benchmarks import benchmark_video, benchmark_classroom_video, BenchmarkReporter
+from fliqx import Fliq
 
 engine = Fliq()
 
@@ -273,9 +273,9 @@ fliq report results.json --format summary
 ## Typical Production Setup
 
 ```python
-from fliq import Fliq
-from fliq.stability import RuntimeMonitor
-from fliq.protection import QueueOverflowProtector, AdaptiveLoadProtector
+from fliqx import Fliq
+from fliqx.stability import RuntimeMonitor
+from fliqx.protection import QueueOverflowProtector, AdaptiveLoadProtector
 from time import sleep
 import logging
 

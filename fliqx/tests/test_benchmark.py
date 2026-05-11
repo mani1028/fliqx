@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import numpy as np
 
-from fliq.benchmarks import benchmark_classroom_load, benchmark_recognition
-from fliq.detection.detector import BoundingBox, DetectedFace
-from fliq.engine import Fliq, RecognitionResult
+from fliqx.benchmarks import benchmark_classroom_load, benchmark_recognition
+from fliqx.detection.detector import BoundingBox, DetectedFace
+from fliqx.engine import Fliq, RecognitionResult
 
 
 def _sample_image(seed: int = 1) -> np.ndarray:

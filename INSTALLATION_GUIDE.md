@@ -11,7 +11,7 @@ pip install fliq
 
 **What you get:**
 - ✅ Core FLIQ engine
-- ✅ CLI tools (`fliq` command)
+- ✅ CLI tools (`fliqx` command)
 - ✅ All optional extras (ONNX, FAISS, FastAPI, OpenCV)
 - ✅ Production-ready code
 - ✅ Type hints and stubs
@@ -100,7 +100,7 @@ pip install -e .
 ### Scenario 1: Adding FLIQ to Your App
 ```bash
 pip install fliq
-from fliq import Fliq
+from fliqx import Fliq
 engine = Fliq()
 ```
 ✅ Use **PyPI** - clean, fast, production-ready
@@ -285,16 +285,16 @@ pip install -e .
 
 ```bash
 # Check version
-python -c "import fliq; print(fliq.Fliq.__module__)"
+python -c "import fliqx; print(fliq.Fliq.__module__)"
 
 # Check what's installed
 pip show fliq
 
 # List installed modules
-python -c "import fliq; print(dir(fliq))"
+python -c "import fliqx; print(dir(fliq))"
 
 # Check if tests are available
-python -c "from fliq.tests import *"  # Will fail if from PyPI
+python -c "from fliqx.tests import *"  # Will fail if from PyPI
 ```
 
 ## Summary

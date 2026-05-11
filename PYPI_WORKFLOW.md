@@ -293,7 +293,7 @@ tar -tzf dist/fliq-*.tar.gz | grep tests
 mkdir test-install
 cd test-install
 pip install ../dist/fliq-*.whl
-python -c "from fliq import Fliq; print(Fliq.__module__)"
+python -c "from fliqx import Fliq; print(Fliq.__module__)"
 ```
 
 ---

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from fliq.cache.memory import ThreadSafeTTLCache
+from fliqx.cache.memory import ThreadSafeTTLCache
 
 
 def test_cache_set_get_and_expiry() -> None:

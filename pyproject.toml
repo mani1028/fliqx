@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "fliq"
+name = "fliqx"
 version = "0.1.0"
 description = "Fast lightweight plug-and-play face recognition optimization engine"
 readme = "README.md"
@@ -21,13 +21,13 @@ onnx = ["onnxruntime>=1.15"]
 faiss = ["faiss-cpu>=1.7"]
 
 [project.scripts]
-fliq = "fliq.cli:main"
+fliqx = "fliqx.cli:main"
 
 [tool.setuptools]
-packages = { find = { where = ["."], include = ["fliq*"], exclude = ["fliq.tests*"] } }
+packages = { find = { where = ["."], include = ["fliqx*"], exclude = ["fliqx.tests*"] } }
 
 [tool.setuptools.package-data]
-fliq = ["py.typed"]
+fliqx = ["py.typed"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
